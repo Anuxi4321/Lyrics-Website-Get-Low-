@@ -1,0 +1,48 @@
+body {
+    background-color: black;
+    font-family: 'Lemon';
+    color: white;
+    animation: neon 5s infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    
+}
+
+#lyrics-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    max-width: 90%;
+}
+
+#lyrics {
+    font-size: 80px; /* Adjust the font size as needed */
+    text-align: center;
+    letter-spacing: 5px;
+    animation: zoomEffect 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes neon {
+    0%, 39%, 41%, 59%, 61%, 100% {
+        text-shadow: 
+        black 0 0 12px,
+        #04D9ff 0 0 24px,
+        #04D9ff 0 0 36px;
+    } 40%, 60% {
+        text-shadow: none;
+    } 
+}
+
+@keyframes zoomEffect {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
